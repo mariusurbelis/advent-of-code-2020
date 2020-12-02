@@ -15,6 +15,7 @@ int main(int argc, char **argv)
 
     int input_number;
 
+    // Reading the file assuming it is full of space separated integers
     while (!input_stream.eof())
     {
         input_stream >> input_number;
