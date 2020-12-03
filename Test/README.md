@@ -1,0 +1,1 @@
+Folder to store random code which is used to practice specific concepts like pointers.
