@@ -58,7 +58,7 @@ int main(int argc, char **argv)
             while (!passport_stream.eof())
             {
                 passport_stream >> one_field;
-                
+
                 if (!IsValid(one_field))
                 {
                     invalid_passport_count++;
@@ -110,9 +110,7 @@ bool IsValid(string statement_input)
         }
 
         if (year >= 1920 && year <= 2002)
-        {
             return true;
-        }
     }
     else if (statement.first == "iyr")
     {
@@ -128,9 +126,7 @@ bool IsValid(string statement_input)
         }
 
         if (year >= 2010 && year <= 2020)
-        {
             return true;
-        }
     }
     else if (statement.first == "eyr")
     {
@@ -146,9 +142,7 @@ bool IsValid(string statement_input)
         }
 
         if (year >= 2020 && year <= 2030)
-        {
             return true;
-        }
     }
     else if (statement.first == "hgt")
     {
@@ -166,40 +160,31 @@ bool IsValid(string statement_input)
         if (statement.second.find("in") != string::npos)
         {
             if (height >= 59 && height <= 76)
-            {
                 return true;
-            }
         }
         else if (statement.second.find("cm") != string::npos)
         {
             if (height >= 150 && height <= 193)
-            {
                 return true;
-            }
         }
     }
     else if (statement.first == "hcl")
     {
         if (statement.second[0] != '#')
-        {
             return false;
-        }
 
         return all_of(statement.second.begin() + 1, statement.second.end(), [](char i) { return ((i >= 'a' && i <= 'f') || (i >= '0' && i <= '9')); });
     }
     else if (statement.first == "ecl")
     {
-        if (statement.second == "amb" || statement.second == "blu" || statement.second == "brn" || statement.second == "gry" || statement.second == "grn" || statement.second == "hzl" || statement.second == "oth")
-        {
+        if (statement.second == "amb" || statement.second == "blu" || statement.second == "brn" ||
+            statement.second == "gry" || statement.second == "grn" || statement.second == "hzl" || statement.second == "oth")
             return true;
-        }
     }
     else if (statement.first == "pid")
     {
         if (statement.second.length() != 9)
-        {
             return false;
-        }
 
         try
         {
