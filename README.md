@@ -1,6 +1,8 @@
 # Advent of Code 2020
 My code used to get the answers for **Advent of Code 2020**. Written in **C++**.
 
+Knowing the clunky nature of **C++** it is not necessarily the best language for quick-to-implement text processing which is the nature of this challenge.
+
 Solutions get released later in the day.
 
 ## Excerpt From the About Page
