@@ -24,6 +24,8 @@ int main(int argc, char **argv)
         for (int x = 0; x < MAX_X; x++)
             input_stream >> map[y][x];
 
+    input_stream.close();
+    
     int ax = 0, bx = 0, cx = 0, dx = 0, ex = 0;
 
     for (int y = 1; y < MAX_Y; y++)
@@ -77,8 +79,6 @@ int main(int argc, char **argv)
     answer *= e;
 
     cout << "Answer: " << answer << endl;
-
-    input_stream.close();
 
     return EXIT_SUCCESS;
 }

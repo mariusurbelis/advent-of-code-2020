@@ -24,6 +24,8 @@ int main(int argc, char **argv)
         for (int x = 0; x < MAX_X; x++)
             input_stream >> map[y][x];
 
+    input_stream.close();
+    
     int x = 0;
 
     for (int y = 1; y < MAX_Y; y++)
@@ -38,8 +40,6 @@ int main(int argc, char **argv)
     }
 
     cout << "Encountered trees: " << tree_count << endl;
-
-    input_stream.close();
 
     return EXIT_SUCCESS;
 }

@@ -41,9 +41,9 @@ int main(int argc, char **argv)
             valid_password_count++;
     }
 
-    cout << "Valid password count: " << valid_password_count << endl;
-
     input_stream.close();
+
+    cout << "Valid password count: " << valid_password_count << endl;
 
     return EXIT_SUCCESS;
 }

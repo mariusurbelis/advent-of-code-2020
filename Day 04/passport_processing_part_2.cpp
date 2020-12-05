@@ -71,9 +71,9 @@ int main(int argc, char **argv)
         }
     }
 
-    cout << "Valid: " << passport_count - invalid_passport_count << endl;
-
     input_stream.close();
+
+    cout << "Valid: " << passport_count - invalid_passport_count << endl;
 
     return EXIT_SUCCESS;
 }

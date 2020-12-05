@@ -45,9 +45,9 @@ int main(int argc, char **argv)
         }
     }
 
-    cout << "Valid: " << valid_passport_count << endl;
-
     input_stream.close();
+
+    cout << "Valid: " << valid_passport_count << endl;
 
     return EXIT_SUCCESS;
 }
