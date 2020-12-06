@@ -12,13 +12,14 @@ const string input_file_name = "input.txt";
 int main(int argc, char **argv)
 {
     vector<char> groups_declaration;
+    
     ifstream input_stream;
-
-    input_stream.open(input_file_name, ifstream::in);
 
     string text_line, declaration;
 
     int answer_count = 0;
+
+    input_stream.open(input_file_name, ifstream::in);
 
     while (!input_stream.eof())
     {
@@ -48,7 +49,5 @@ int main(int argc, char **argv)
 void InsertAnswer(vector<char> &declarations, char answer)
 {
     if (!(find(declarations.begin(), declarations.end(), answer) != declarations.end()))
-    {
         declarations.push_back(answer);
-    }    
 }

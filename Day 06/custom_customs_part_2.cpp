@@ -1,7 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
-#include <algorithm>
 
 #define ABC_MAX 26
 
@@ -17,12 +15,12 @@ int main(int argc, char **argv)
 
     ifstream input_stream;
 
-    input_stream.open(input_file_name, ifstream::in);
-
     string text_line, declaration;
 
     int answer_count = 0;
     int people_in_group = 0;
+
+    input_stream.open(input_file_name, ifstream::in);
 
     while (!input_stream.eof())
     {

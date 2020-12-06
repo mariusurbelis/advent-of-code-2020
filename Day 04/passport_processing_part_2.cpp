@@ -15,16 +15,17 @@ const string input_file_name = "input.txt";
 int main(int argc, char **argv)
 {
     vector<int> input_numbers;
-    ifstream input_stream;
 
-    input_stream.open(input_file_name, ifstream::in);
+    ifstream input_stream;
 
     string text_line;
     string passport = "";
 
     int passport_count = 0;
     int invalid_passport_count = 0;
+
     int line_i = 0;
+    input_stream.open(input_file_name, ifstream::in);
 
     while (!input_stream.eof())
     {

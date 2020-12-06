@@ -9,14 +9,15 @@ const string input_file_name = "input.txt";
 int main(int argc, char **argv)
 {
     vector<int> input_numbers;
+    
     ifstream input_stream;
-
-    input_stream.open(input_file_name, ifstream::in);
 
     string text_line;
     string passport = "";
 
     int valid_passport_count = 0;
+
+    input_stream.open(input_file_name, ifstream::in);
 
     while (!input_stream.eof())
     {

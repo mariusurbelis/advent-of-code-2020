@@ -6,16 +6,18 @@
 using namespace std;
 
 const string input_file_name = "input.txt";
+
 const int target_number = 2020;
 
 int main(int argc, char **argv)
 {
     vector<int> input_numbers;
+    
     ifstream input_stream;
 
-    input_stream.open(input_file_name, ifstream::in);
-
     int input_number;
+
+    input_stream.open(input_file_name, ifstream::in);
 
     while (!input_stream.eof())
     {

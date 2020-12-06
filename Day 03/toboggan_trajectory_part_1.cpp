@@ -14,6 +14,7 @@ int main(int argc, char **argv)
     char map[MAX_Y][MAX_X];
 
     vector<int> input_numbers;
+    
     ifstream input_stream;
 
     int tree_count = 0;

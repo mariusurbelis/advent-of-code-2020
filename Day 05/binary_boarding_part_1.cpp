@@ -11,18 +11,19 @@ using namespace std;
 int IDFromString(string sequence);
 
 const string input_file_name = "input.txt";
+
 string test_input = "FBFBBFFRLR";
 
 int main(int argc, char **argv)
 {
     ifstream input_stream;
 
-    input_stream.open(input_file_name, ifstream::in);
-
     string input_string;
 
     int highest_id = 0;
     int current_id = 0;
+    
+    input_stream.open(input_file_name, ifstream::in);
 
     while (!input_stream.eof())
     {
@@ -62,13 +63,9 @@ int IDFromString(string sequence)
         }
 
         if (sequence[i] == 'F')
-        {
             current_row_top = ((current_row_bottom + current_row_top) / 2);
-        }
         else if (sequence[i] == 'B')
-        {
             current_row_bottom = ((current_row_bottom + current_row_top) / 2) + 1;
-        }
     }
 
     for (int i = 7; i <= 9; i++)
@@ -76,23 +73,15 @@ int IDFromString(string sequence)
         if (i == 9)
         {
             if (sequence[i] == 'L')
-            {
                 id = id * 8 + current_column_bottom;
-            }
             else if (sequence[i] == 'R')
-            {
                 id = id * 8 + current_column_top;
-            }
         }
 
         if (sequence[i] == 'L')
-        {
             current_column_top = ((current_column_bottom + current_column_top) / 2);
-        }
         else if (sequence[i] == 'R')
-        {
             current_column_bottom = ((current_column_bottom + current_column_top) / 2) + 1;
-        }
     }
 
     return id;

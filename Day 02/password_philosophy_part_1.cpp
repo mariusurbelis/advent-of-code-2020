@@ -13,14 +13,14 @@ int main(int argc, char **argv)
 {
     ifstream input_stream;
 
-    input_stream.open(input_file_name, ifstream::in);
-
     string input_line, password;
+
     char password_letter;
 
     int min, max, occurrences = 0;
-
     int valid_password_count = 0;
+
+    input_stream.open(input_file_name, ifstream::in);
 
     while (getline(input_stream, input_line))
     {
