@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <sstream>
 #include <regex>
 
 #define LAST bags.size() - 1
