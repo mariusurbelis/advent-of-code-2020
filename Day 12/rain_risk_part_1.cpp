@@ -76,21 +76,13 @@ void MoveShip(v2 &position, dir direction, int units)
 void ExecuteInstruction(v2 &position, dir &direction, char instruction_char, int instruction_number)
 {
     if (instruction_char == 'F')
-    {
         MoveShip(position, direction, instruction_number);
-    }
     else if (instruction_char == 'R')
-    {
         TurnShip(direction, instruction_number, true);
-    }
     else if (instruction_char == 'L')
-    {
         TurnShip(direction, instruction_number, false);
-    }
     else
-    {
         MoveShip(position, (dir)instruction_char, instruction_number);
-    }
 }
 
 int main(int argc, char **argv)
@@ -115,7 +107,7 @@ int main(int argc, char **argv)
 
         if (input_instruction == "")
             break;
-        
+
         instruction_char = input_instruction[0];
 
         instruction_number = stoi(input_instruction.substr(1, input_instruction.length()));

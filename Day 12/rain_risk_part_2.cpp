@@ -18,8 +18,8 @@ enum dir
 
 struct v2
 {
-    long x;
-    long y;
+    int x;
+    int y;
 };
 
 void RotateWaypoint(v2 &waypoint, bool right)
@@ -86,8 +86,6 @@ int main(int argc, char **argv)
 
     waypoint.x = 10;
     waypoint.y = 1;
-
-    //cout << "Waypoint x:" << waypoint.x << " y:" << waypoint.y << endl;
 
     input_stream.open(input_file_name, ifstream::in);
 
