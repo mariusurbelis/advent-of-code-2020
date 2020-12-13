@@ -26,8 +26,8 @@ void RotateWaypoint(v2 &waypoint, bool right)
 {
     int x = waypoint.x;
     int y = waypoint.y;
-    waypoint.x = right ? -y : y;
-    waypoint.y = right ? x : -x;
+    waypoint.x = right ? y : -y;
+    waypoint.y = right ? -x : x;
 }
 
 void MoveWaypoint(v2 &position, dir direction, int units)
